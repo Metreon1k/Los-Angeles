@@ -18,7 +18,7 @@ h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
 .r { color:#5fa8ff; } .f { color:#ff9f43; } .j { color:#c77dff; }
 .dim { opacity:.8; }
 .card p { font-size:13px; line-height:1.3; margin:4px 0 0; }
-.scrollable { max-height:600px; overflow-y:auto; padding-right:6px; }
+.scrollable { max-height:680px; overflow-y:auto; padding-right:6px; }
 .scrollable::-webkit-scrollbar { width:6px; }
 .scrollable::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius:3px; }
 @media(max-width:900px){ .card.long { grid-column:span 1; } }
@@ -27,48 +27,81 @@ h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
 <body>
 <h1>📘 Памятка | УК и АК LA</h1>
 <div class="grid">
-
-<!-- УК -->
+<!-- УК – обновлённый и расширенный список -->
 <div class="card long scrollable">
 <h2>⚖️ Уголовный кодекс</h2>
 <ul>
 <li><b>6.1 ч1 <span class="r">(R/F)</span></b> — Умышленное или неоднократное нанесение телесных повреждений с использованием посторонних предметов | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>6.1 ч2 <span class="r">(R/F)</span></b> — Умышленное или неоднократное нанесение телесных повреждений | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
 <li><b>6.2 <span class="r">(R/F)</span></b> — Убийство, умышленное причинение смерти | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
-<li><b>10.4 <span class="r">(R/F)</span></b> — Разбой (ограбление) | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
-<li><b>10.5 ч1 <span class="r">(R/F)</span></b> — Угон | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>6.6 <span class="r">(R)</span></b> — Нарушение ПДД/эксплуатации транспорта, повлёкшее тяжкий вред/смерть | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>6.7 ч1 <span class="r">(R/F)</span></b> — Угроза расправой должностному лицу | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>6.7 ч2 <span class="r">(R/F)</span></b> — Угрозы с целью запугать человека | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>6.7 ч3 <span class="r">(R/F)</span></b> — Угрозы жизни/здоровью с оружием гражданину | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>7.2 ч3 <span class="r">(R/F)</span></b> — Клевета оскорбительного/унизительного характера | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>8.4 <span class="r">(R/F)</span></b> — Сексуальное домогательство | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>9.2 <span class="r">(R/F)</span></b> — Незаконное проникновение в жилище/частную территорию | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>9.6 ч1 <span class="f">(F)</span></b> — Необоснованный отказ в медпомощи, повлёкший вред здоровью | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>9.7 ч1 <span class="f">(F)</span></b> — Отказ сотрудника правоохраны в помощи, повлёкший вред | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>10.3 <span class="r">(R/F)</span></b> — Грабёж / разбойное нападение | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>10.4 <span class="r">(R/F)</span></b> — Разбой с насилием/угрозой жизни или здоровью | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>10.5 ч1 <span class="r">(R/F)</span></b> — Угон (гражданский транспорт) | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
 <li><b>10.5 ч2 <span class="r">(R/F)</span></b> — Угон гос. транспорта | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
-<li><b>10.6 ч1/ч2 <span class="r">(R)</span></b> — Уничтожение или повреждение чужого/гос. имущества | Судимость: Нет/Да | Розыск: 2/4</li>
-<li><b>12.7 ч1 <span class="r">(R/F)</span></b> — Незаконное проникновение на закрытый объект | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
-<li><b>12.7 ч2 <span class="r">(R/F)</span></b> — Незаконное проникновение на режимный объект (SANG/FIB/GOV) | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
-<li><b>13.1 ч1 <span class="r">(R/F)</span></b> — Наркотики >5г | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
-<li><b>13.1 ч2 <span class="r">(R/F)</span></b> — Наркотики >10г | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>10.6 ч1 <span class="r">(R)</span></b> — Уничтожение/повреждение чужого имущества | Судимость: Нет | Розыск: <span class="stars">★★</span></li>
+<li><b>10.6 ч2 <span class="r">(R)</span></b> — Уничтожение/повреждение гос. имущества | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>10.6 ч3 <span class="r">(R)</span></b> — Уничтожение имущества из хулиганских побуждений / поджог и т.п. | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>11.4 ч6 <span class="f">(F)</span></b> — Нецелевое использование бюджета | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>11.4 ч7 <span class="f">(F)</span></b> — Присвоение гос. средств | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
+<li><b>12.6 ч1 <span class="r">(R/F)</span></b> — Хулиганство с оружием/предметами | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>12.6 ч3 <span class="r">(R/F)</span></b> — Воспрепятствование / унижение EMS | Судимость: Нет | Розыск: <span class="stars">★★★★</span></li>
+<li><b>12.7 ч1 <span class="r">(R/F)</span></b> — Проникновение на закрытый объект | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>12.7 ч2 <span class="r">(R/F)</span></b> — Проникновение на режимный объект (SANG/FIB/GOV) | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
+<li><b>12.7 ч3 <span class="r">(R/F)</span></b> — Нарушение регламента на охраняемой территории | Судимость: Нет | Розыск: <span class="stars">★★</span></li>
+<li><b>12.8 ч1 <span class="r">(R/F)</span></b> — Незаконное хранение/ношение оружия | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>12.8 ч2 <span class="r">(R/F)</span></b> — Ношение/использование гос. спецсредств гражданскими | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
+<li><b>12.8 ч3 <span class="r">(R/F)</span></b> — Нарушение правил оборота оружия | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>12.8 ч4 <span class="r">(R/F)</span></b> — Подделка транспортной накладной | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>13.1 ч1 <span class="r">(R/F)</span></b> — Наркотики >5 г | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>13.1 ч2 <span class="r">(R/F)</span></b> — Наркотики >10 г | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
 <li><b>13.2 <span class="r">(R/F)</span></b> — Кустарное производство наркотиков | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
 <li><b>13.4 <span class="f">(F)</span></b> — Наркотики у гос. сотрудников | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
-<li><b>14.3 ч1 <span class="f">(F)</span></b> — Разглашение тайны Confidential | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
-<li><b>14.3 ч3 <span class="f">(F)</span></b> — Разглашение тайны Secret/Top Secret | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
+<li><b>14.3 ч1 <span class="f">(F)</span></b> — Разглашение Confidential | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>14.3 ч3 <span class="f">(F)</span></b> — Разглашение Secret / Top Secret | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
+<li><b>14.7 <span class="f">(F)</span></b> — Пропаганда массовых беспорядков / сопротивления | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
+<li><b>14.14 <span class="f">(F)</span></b> — Захват гос. зданий / мятеж | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
 <li><b>15.1 ч1 <span class="r">(R/F)</span></b> — Превышение полномочий | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
-<li><b>15.4 ч1 <span class="r">(R/F)</span></b> — Злоупотребление полномочиями | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
-<li><b>15.5 ч1 <span class="r">(R/F)</span></b> — Взятка (получение) | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
-<li><b>15.6 <span class="r">(R/F)</span></b> — Дача или попытка дачи взятки | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
-<li><b>15.7 ч1 <span class="r">(R/F)</span></b> — Халатность | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>15.1 ч2 <span class="r">(R/F)</span></b> — Превышение руководителем структуры (кроме Правительства) | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>15.1 ч3 <span class="r">(R/F)</span></b> — Превышение руководителем Правительства | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
+<li><b>15.3 <span class="r">(R)</span></b> — Самовольное присвоение полномочий должностного лица | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>15.5 ч1 <span class="r">(R/F)</span></b> — Получение взятки | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
+<li><b>15.6 <span class="r">(R/F)</span></b> — Дача взятки / попытка | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>15.7 ч1 <span class="r">(R/F)</span></b> — Халатность с крупным ущербом | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>15.7 ч2 <span class="r">(R/F)</span></b> — Халатность с тяжким вредом/смертью | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
+<li><b>15.7 ч3 <span class="r">(R/F)</span></b> — Халатность в общении (этика) | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>16.1 <span class="r">(R/F)</span></b> — Вмешательство в деятельность суда/следствия | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
 <li><b>16.2 <span class="f">(F)</span></b> — Воспрепятствование адвокату | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
 <li><b>16.3 <span class="f">(F)</span></b> — Воспрепятствование прокурору | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
-<li><b>16.7 <span class="f">(F)</span></b> — Незаконное задержание | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>16.5 <span class="r">(R/F)</span></b> — Неуважение к суду | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
 <li><b>16.7.1 <span class="f">(F)</span></b> — Незаконное лишение свободы | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
-<li><b>16.13 <span class="f">(F)</span></b> — Неисполнение судебного документа | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
-<li><b>16.16 ч1 <span class="r">(R/F)</span></b> — Ложные показания | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
-<li><b>16.17 <span class="r">(R/F)</span></b> — Побег из мест лишения свободы | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
-<li><b>16.19 <span class="r">(R/F)</span></b> — Уклонение от наказания | Судимость: Нет/Да | Розыск: 1-5</li>
+<li><b>16.13 <span class="f">(F)</span></b> — Неисполнение судебного акта | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>16.15 <span class="f">(F)</span></b> — Уклонение от следствия/суда | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>16.16 ч1 <span class="r">(R/F)</span></b> — Ложные показания адвокату/прокурору | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>16.16 ч2 <span class="r">(R/F)</span></b> — Ложные показания должностному лицу | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>16.17 <span class="r">(R/F)</span></b> — Побег из-под стражи | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
+<li><b>16.19 <span class="r">(R/F)</span></b> — Уклонение от отбывания наказания | Судимость: Да/Нет | Розыск: 1–5</li>
+<li><b>16.20 <span class="r">(R/F)</span></b> — Давление на прокуратуру/адвокатуру | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
 <li><b>17.1 <span class="r">(R/F)</span></b> — Посягательство на жизнь сотрудника | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
-<li><b>17.2 <span class="r">(R/F)</span></b> — Телесные повреждения госнику | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
-<li><b>17.3 <span class="r">(R/F)</span></b> — Оскорбление власти | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>17.2 <span class="r">(R/F)</span></b> — Телесные повреждения / угроза гос. служащему | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>17.3 <span class="r">(R/F)</span></b> — Неоднократное оскорбление власти | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
 <li><b>17.6 <span class="r">(R/F)</span></b> — Неповиновение | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
 <li><b>17.7 <span class="r">(R/F)</span></b> — Отказ от оплаты штрафа | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
-<li><b>17.9 <span class="r">(R)</span></b> — Грубое оскорбление | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>17.9 <span class="r">(R)</span></b> — Грубое/неоднократное оскорбление | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>17.10 <span class="r">(R/F)</span></b> — Вмешательство в задержание с насилием/угрозой | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>17.12 <span class="r">(R/F)</span></b> — Побег при задержании | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
 </ul>
 </div>
 
-<!-- Остальные блоки сеткой -->
+<!-- Остальные блоки без изменений -->
 <div class="card">
 <h2>🛡 Неприкосновенные лица</h2>
 <ul>
