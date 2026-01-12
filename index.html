@@ -13,19 +13,34 @@ h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
 .card.long { grid-column:span 2; }
 .card h2 { font-size:16px; text-align:center; color:#7db6ff; margin:4px 0 8px; }
 .card ul, .card ol { padding-left:16px; margin:0; }
-.card li { font-size:13px; line-height:1.35; margin-bottom:4px; }
+.card li { font-size:13px; line-height:1.3; margin-bottom:4px; }
 .stars { color:#ffd966; }
 .r { color:#5fa8ff; } .f { color:#ff9f43; } .j { color:#c77dff; }
 .dim { opacity:.8; }
-.card p { font-size:13px; line-height:1.4; margin:6px 0 0; }
+.card p { font-size:13px; line-height:1.3; margin:4px 0 0; }
+
+/* Компактные скроллируемые блоки */
+.scrollable {
+  max-height: 380px; /* высота блока */
+  overflow-y: auto;
+  padding-right: 6px; /* для скролла */
+}
+
+/* Скрытый стиль скролла для Chrome/Edge */
+.scrollable::-webkit-scrollbar { width:6px; }
+.scrollable::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius:3px; }
+
+@media(max-width:900px){
+  .card.long { grid-column:span 1; }
+}
 </style>
 </head>
 <body>
 <h1>📘 Памятка | УК и АК LA</h1>
 <div class="grid">
 
-<!-- УК -->
-<div class="card long">
+<!-- УК с прокруткой -->
+<div class="card long scrollable">
 <h2>⚖️ Уголовный кодекс</h2>
 <ul>
 <li><b>6.1 ч1 <span class="r">(R/F)</span></b> — Телесные повреждения | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
@@ -33,15 +48,15 @@ h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
 <li><b>10.4 <span class="r">(R/F)</span></b> — Разбой | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
 <li><b>10.5 ч1 <span class="r">(R/F)</span></b> — Угон | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
 <li><b>10.5 ч2 <span class="r">(R/F)</span></b> — Угон гос. транспорта | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
-<li><b>10.6 ч1/ч2 <span class="r">(R)</span></b> — Умышленное уничтожение чужого / гос. имущества | Судимость: Нет/Да | Розыск: 2/4</li>
-<li><b>12.7 ч1 <span class="r">(R/F)</span></b> — Незаконное проникновение на закрытый объект | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
-<li><b>12.7 ч2 <span class="r">(R/F)</span></b> — Незаконное проникновение на режимный объект | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
-<li><b>13.1 ч1 <span class="r">(R/F)</span></b> — Наркотики &gt;5г | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
-<li><b>13.1 ч2 <span class="r">(R/F)</span></b> — Наркотики &gt;10г | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
-<li><b>13.2 <span class="r">(R/F)</span></b> — Производство наркотиков | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
+<li><b>10.6 ч1/ч2 <span class="r">(R)</span></b> — Уничтожение чужого/гос. имущества | Судимость: Нет/Да | Розыск: 2/4</li>
+<li><b>12.7 ч1 <span class="r">(R/F)</span></b> — Незаконное проникновение | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>12.7 ч2 <span class="r">(R/F)</span></b> — Проникновение на режимный объект | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>13.1 ч1 <span class="r">(R/F)</span></b> — Наркотики >5г | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>13.1 ч2 <span class="r">(R/F)</span></b> — Наркотики >10г | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>13.2 <span class="r">(R/F)</span></b> — Производство | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
 <li><b>13.4 <span class="f">(F)</span></b> — Наркотики у гос. сотрудников | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
-<li><b>14.3 ч1 <span class="f">(F)</span></b> — Разглашение тайны Confidential | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
-<li><b>14.3 ч3 <span class="f">(F)</span></b> — Разглашение тайны Secret/Top Secret | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
+<li><b>14.3 ч1 <span class="f">(F)</span></b> — Тайна Confidential | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>14.3 ч3 <span class="f">(F)</span></b> — Тайна Secret/TopSecret | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
 <li><b>15.1 ч1 <span class="r">(R/F)</span></b> — Превышение полномочий | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
 <li><b>15.4 ч1 <span class="r">(R/F)</span></b> — Злоупотребление полномочиями | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
 <li><b>15.5 ч1 <span class="r">(R/F)</span></b> — Взятка (получение) | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
@@ -49,22 +64,13 @@ h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
 <li><b>15.7 ч1 <span class="r">(R/F)</span></b> — Халатность | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
 <li><b>16.2 <span class="f">(F)</span></b> — Давление на адвоката | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
 <li><b>16.3 <span class="f">(F)</span></b> — Давление на прокурора | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
-<li><b>16.7 <span class="f">(F)</span></b> — Незаконное задержание | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
-<li><b>16.7.1 <span class="f">(F)</span></b> — Незаконное лишение свободы | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
-<li><b>16.13 <span class="f">(F)</span></b> — Неисполнение судебного документа | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
-<li><b>16.16 ч1 <span class="r">(R/F)</span></b> — Ложные показания | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
 <li><b>16.17 <span class="r">(R/F)</span></b> — Побег | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
-<li><b>16.19 <span class="r">(R/F)</span></b> — Уклонение от наказания | Судимость: Нет/Да | Розыск: 1-5</li>
-<li><b>17.1 <span class="r">(R/F)</span></b> — Нападение на сотрудника | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
-<li><b>17.2 <span class="r">(R/F)</span></b> — Телесные повреждения госнику | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
-<li><b>17.3 <span class="r">(R/F)</span></b> — Оскорбление власти | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
-<li><b>17.6 <span class="r">(R/F)</span></b> — Неповиновение | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
-<li><b>17.7 <span class="r">(R/F)</span></b> — Отказ оплаты штрафа | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>17.1 <span class="r">(R/F)</span></b> — Посягательство на жизнь | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
 <li><b>17.9 <span class="r">(R)</span></b> — Грубое оскорбление | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
 </ul>
 </div>
 
-<!-- Неприкосновенные -->
+<!-- Остальные блоки компактные -->
 <div class="card">
 <h2>🛡 Неприкосновенные лица</h2>
 <ul>
@@ -81,7 +87,6 @@ h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
 </ul>
 </div>
 
-<!-- Юрисдикции -->
 <div class="card">
 <h2>⚖ Юрисдикции статей</h2>
 <ul>
@@ -91,7 +96,6 @@ h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
 </ul>
 </div>
 
-<!-- Порядок задержания -->
 <div class="card">
 <h2>⏱ Порядок задержания</h2>
 <ol>
@@ -106,14 +110,13 @@ h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
 </ol>
 </div>
 
-<!-- Административный кодекс -->
 <div class="card long">
 <h2>📜 Административный кодекс</h2>
 <ul>
 <li>Ст.4 — Ношение масок</li>
 <li>Ст.14.2 — Закон о гос. службе</li>
 <li>Гл.3 ст.6.2.1 — Отстранение не субъектов</li>
-<li>Гл.15 ст.65 — Основания для траффик-стопа</li>
+<li>Гл.15 ст.65 — Траффик-стоп</li>
 <li>Гл.4 ст.4.2 — Телефон не по назначению</li>
 <li>Гл.4 ст.2 — Закон об адвокатах</li>
 <li>Гл.7 ст.6 — Обыск в радиусе 5 м</li>
@@ -121,11 +124,10 @@ h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
 <p class="dim">Памятка by Matt Grossi (Discord: jason_wylth)</p>
 </div>
 
-<!-- Ограничения -->
 <div class="card">
 <h2>⏳ Ограничения по времени</h2>
 <ul>
-<li>Адвокат — 3 мин принятие / 7 мин приезд</li>
+<li>Адвокат — 3 мин / 7 мин</li>
 <li>Прокурор — 10 + 10 мин</li>
 <li>Начальство — 10 + 10 мин</li>
 <li>Конф. беседа — 5 мин</li>
@@ -133,14 +135,11 @@ h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
 </ul>
 </div>
 
-<!-- Миранда -->
 <div class="card">
 <h2>📝 Право Миранды</h2>
-<p>
-Вы имеете право хранить молчание. Всё, что вы скажете, будет использовано против вас.<br>
+<p>Вы имеете право хранить молчание. Всё, что вы скажете, будет использовано против вас.<br>
 Вы имеете право на адвоката. Если не можете оплатить — адвокат предоставляется государством.<br>
-Вы имеете право на один телефонный звонок.
-</p>
+Вы имеете право на один телефонный звонок.</p>
 </div>
 
 </div>
