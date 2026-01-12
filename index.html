@@ -6,40 +6,55 @@
 <title>Памятка | УК и АК LA</title>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-body { margin:0; font-family:'Rubik',sans-serif; background:#0f1115; color:#e6e9ee; }
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family:'Rubik',sans-serif;
+  background:#0f1115;
+  color:#e6e9ee;
+}
 h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
-.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:16px; padding:16px; max-width:1900px; margin:0 auto; }
-.card { background:rgba(25,28,34,.92); border-radius:12px; padding:12px 14px; border:1px solid rgba(255,255,255,.05); }
-.card.long { grid-column:span 2; }
+.grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap:16px;
+  padding:16px;
+  width:100%;
+  min-height:100vh;
+  box-sizing:border-box;
+}
+.card {
+  background:rgba(25,28,34,.92);
+  border-radius:12px;
+  padding:12px 14px;
+  border:1px solid rgba(255,255,255,.05);
+  display:flex;
+  flex-direction:column;
+}
+.card.long { grid-column: span 2; }
 .card h2 { font-size:16px; text-align:center; color:#7db6ff; margin:4px 0 8px; }
-.card ul, .card ol { padding-left:16px; margin:0; }
+.card ul, .card ol { padding-left:16px; margin:0; flex-grow:1; overflow:auto; }
 .card li { font-size:13px; line-height:1.3; margin-bottom:4px; }
 .stars { color:#ffd966; }
 .r { color:#5fa8ff; } .f { color:#ff9f43; } .j { color:#c77dff; }
 .dim { opacity:.8; }
 .card p { font-size:13px; line-height:1.3; margin:4px 0 0; }
-
-/* Компактные скроллируемые блоки */
 .scrollable {
-  max-height: 380px; /* высота блока */
-  overflow-y: auto;
-  padding-right: 6px; /* для скролла */
+  max-height:400px;
+  overflow-y:auto;
+  padding-right:6px;
 }
-
-/* Скрытый стиль скролла для Chrome/Edge */
 .scrollable::-webkit-scrollbar { width:6px; }
 .scrollable::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius:3px; }
-
-@media(max-width:900px){
-  .card.long { grid-column:span 1; }
-}
+@media(max-width:900px){ .card.long { grid-column: span 1; } }
 </style>
 </head>
 <body>
 <h1>📘 Памятка | УК и АК LA</h1>
 <div class="grid">
 
-<!-- УК с прокруткой -->
+<!-- УК -->
 <div class="card long scrollable">
 <h2>⚖️ Уголовный кодекс</h2>
 <ul>
@@ -51,8 +66,8 @@ h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
 <li><b>10.6 ч1/ч2 <span class="r">(R)</span></b> — Уничтожение чужого/гос. имущества | Судимость: Нет/Да | Розыск: 2/4</li>
 <li><b>12.7 ч1 <span class="r">(R/F)</span></b> — Незаконное проникновение | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
 <li><b>12.7 ч2 <span class="r">(R/F)</span></b> — Проникновение на режимный объект | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
-<li><b>13.1 ч1 <span class="r">(R/F)</span></b> — Наркотики >5г | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
-<li><b>13.1 ч2 <span class="r">(R/F)</span></b> — Наркотики >10г | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
+<li><b>13.1 ч1 <span class="r">(R/F)</span></b> — Наркотики &gt;5г | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
+<li><b>13.1 ч2 <span class="r">(R/F)</span></b> — Наркотики &gt;10г | Судимость: Да | Розыск: <span class="stars">★★★★</span></li>
 <li><b>13.2 <span class="r">(R/F)</span></b> — Производство | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
 <li><b>13.4 <span class="f">(F)</span></b> — Наркотики у гос. сотрудников | Судимость: Да | Розыск: <span class="stars">★★★★★</span></li>
 <li><b>14.3 ч1 <span class="f">(F)</span></b> — Тайна Confidential | Судимость: Нет | Розыск: <span class="stars">★★★</span></li>
@@ -70,7 +85,7 @@ h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
 </ul>
 </div>
 
-<!-- Остальные блоки компактные -->
+<!-- Неприкосновенные лица -->
 <div class="card">
 <h2>🛡 Неприкосновенные лица</h2>
 <ul>
@@ -87,6 +102,7 @@ h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
 </ul>
 </div>
 
+<!-- Юрисдикции -->
 <div class="card">
 <h2>⚖ Юрисдикции статей</h2>
 <ul>
@@ -96,6 +112,7 @@ h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
 </ul>
 </div>
 
+<!-- Порядок задержания -->
 <div class="card">
 <h2>⏱ Порядок задержания</h2>
 <ol>
@@ -110,6 +127,7 @@ h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
 </ol>
 </div>
 
+<!-- Административный кодекс -->
 <div class="card long">
 <h2>📜 Административный кодекс</h2>
 <ul>
@@ -119,11 +137,12 @@ h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
 <li>Гл.15 ст.65 — Траффик-стоп</li>
 <li>Гл.4 ст.4.2 — Телефон не по назначению</li>
 <li>Гл.4 ст.2 — Закон об адвокатах</li>
-<li>Гл.7 ст.6 — Обыск в радиусе 5 м</li>
+<li>Гл.7 ст.6 — Обыск 5 м</li>
 </ul>
 <p class="dim">Памятка by Matt Grossi (Discord: jason_wylth)</p>
 </div>
 
+<!-- Ограничения -->
 <div class="card">
 <h2>⏳ Ограничения по времени</h2>
 <ul>
@@ -135,6 +154,7 @@ h1 { text-align:center; margin:12px 0; color:#4ea1ff; font-size:22px; }
 </ul>
 </div>
 
+<!-- Миранда -->
 <div class="card">
 <h2>📝 Право Миранды</h2>
 <p>Вы имеете право хранить молчание. Всё, что вы скажете, будет использовано против вас.<br>
