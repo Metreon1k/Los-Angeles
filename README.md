@@ -1,2 +1,2 @@
 # -Los-Angeles
-Mejestic Памятка сервера Los Angeles
+Majestic Памятка сервера Los Angeles
