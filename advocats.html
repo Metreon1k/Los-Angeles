@@ -13,6 +13,7 @@
             color: #e0e4ed;
             min-height: 100vh;
             line-height: 1.5;
+            padding-bottom: 48px;
         }
         .container {
             max-width: 1200px;
@@ -94,19 +95,22 @@
             color: #ffffff;
 
 
-        .footer {
+.footer {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;         
-    width: 100%;
-    text-align: center;
-    padding: 8px 0;
-    background: rgba(20, 30, 50, 0.8);
-    color: #cfe4ff;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 12px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    color: rgba(207, 228, 255, 0.65);
+    background: rgba(30, 36, 50, 0.55);
+    padding: 6px 12px;
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.08);
+    z-index: 998;
+    white-space: nowrap;
 }
+
     </style>
 </head>
 <body>
@@ -377,7 +381,7 @@
 
     </div>
 </div>
-    <div class="footer">
+<div class="footer">
     Памятка by Husher Smith (Discord: metreonik)
 </div>
 </body>
