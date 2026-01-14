@@ -111,32 +111,38 @@
             opacity: 0.9;
         }
 
-        /* 🔹 Кнопка справа сверху */
-        .top-button {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            z-index: 10;
-        }
-        .top-button a {
-            display: inline-block;
-            padding: 8px 14px;
-            font-size: 12.5px;
-            font-weight: 500;
-            color: #cfe4ff;
-            text-decoration: none;
-            background: rgba(30, 36, 50, 0.7);
-            backdrop-filter: blur(6px);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.35);
-            transition: all 0.2s ease;
-        }
-        .top-button a:hover {
-            background: rgba(50, 70, 110, 0.85);
-            color: #ffffff;
-            transform: translateY(-1px);
-        }
+.top-button {
+    position: fixed;     
+    top: 16px;             
+    right: -100px;        
+    z-index: 999;          
+    transition: right 0.3s ease; 
+}
+
+.top-button a {
+    display: inline-block;
+    padding: 8px 14px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: #cfe4ff;
+    text-decoration: none;
+    background: rgba(30, 36, 50, 0.7);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    transition: all 0.2s ease;
+}
+
+.top-button:hover {
+    right: 16px; 
+}
+
+.top-button a:hover {
+    background: rgba(50, 70, 110, 0.85);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
 
         @media (max-width: 900px) {
             .grid { gap: 12px; }
