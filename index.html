@@ -6,190 +6,174 @@
     <title>Памятка | УК и АК LA</title>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
  <style>
-    /* Общие стили */
-    * { box-sizing: border-box; margin:0; padding:0; }
+ весь код скинь
+   <style>
+        * { box-sizing: border-box; margin:0; padding:0; }
+        body {
+            font-family: 'Rubik', sans-serif;
+            background: #0a0c11;
+            color: #e0e4ed;
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px 0 24px;
+            color: #4ea1ff;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 16px;
+            padding-bottom: 32px;
+        }
+        .card {
+            background: rgba(20, 24, 32, 0.94);
+            border-radius: 12px;
+            padding: 20px 24px;
+            border: 1px solid rgba(255,255,255,0.07);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+            position: relative;
+        }
+        .card.long {
+            grid-column: 1 / -1;
+            padding: 20px 24px;
+        }
+        .card h2 {
+            font-size: 17px;
+            text-align: center;
+            color: #7db6ff;
+            margin: 0 0 16px;
+            font-weight: 500;
+        }
+        .card ul, .card ol {
+            padding-left: 24px;
+            margin: 0;
+            list-style-position: inside;
+            line-height: 1.9;
+        }
+        .card li {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .card li:last-child {
+            margin-bottom: 0;
+        }
+        .stars { color: #ffd966; }
+        .r { color: #5fa8ff; }
+        .f { color: #ff9f43; }
+        .j { color: #c77dff; }
+        .dim {
+            opacity: 0.7;
+            font-size: 12px;
+            text-align: center;
+            margin-top: 16px;
+            display: block;
+        }
+        .scrollable {
+            max-height: 68vh;
+            overflow-y: auto;
+            padding-right: 8px;
+        }
+        .scrollable::-webkit-scrollbar { width: 6px; }
+        .scrollable::-webkit-scrollbar-thumb { background: rgba(140,160,200,0.55); border-radius: 3px; }
+        .scrollable::-webkit-scrollbar-track { background: transparent; }
+        p { font-size: 14px; margin: 6px 0; line-height: 1.6; }
+        strong { color: #a5d8ff; }
 
-    html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        font-family: 'Rubik', sans-serif;
-        line-height: 1.5;
-        color: #e0e4ed;
-        background: linear-gradient(135deg, #0a0c11, #1a1f2b); /* фон во весь экран */
-    }
+        .jurisdiction {
+            position: sticky;
+            top: 12px;
+            float: right;
+            background: rgba(30, 36, 50, 0.55);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 10px;
+            padding: 8px 12px;
+            font-size: 11.5px;
+            line-height: 1.5;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+            opacity: 0.85;
+            z-index: 5;
+        }
+        .jurisdiction strong {
+            display: block;
+            text-align: center;
+            font-size: 11px;
+            margin-bottom: 4px;
+            color: #9ecbff;
+            opacity: 0.9;
+        }
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 16px;
-        position: relative;
-    }
+.top-button {
+    position: fixed;     
+    top: 16px;            
+    right: 16px;         
+    z-index: 999;      
+}
 
-    h1 {
-        text-align: center;
-        padding: 20px 0 24px;
-        color: #4ea1ff;
-        font-size: 24px;
-        font-weight: 600;
-    }
+.top-button a {
+    display: inline-block;
+    padding: 8px 14px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: #cfe4ff;
+    text-decoration: none;
+    background: rgba(30, 36, 50, 0.7);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    transition: all 0.2s ease;
+}
 
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-        gap: 16px;
-        padding-bottom: 32px;
-    }
+.top-button a:hover {
+    background: rgba(50, 70, 110, 0.85);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
 
-    .card {
-        background: rgba(20, 24, 32, 0.94);
-        border-radius: 12px;
-        padding: 20px 24px;
-        border: 1px solid rgba(255,255,255,0.07);
-        box-shadow: 0 4px 14px rgba(0,0,0,0.5);
-        position: relative;
-    }
 
-    .card.long {
-        grid-column: 1 / -1;
-        padding: 20px 24px;
-    }
+        @media (max-width: 900px) {
+            .grid { gap: 12px; }
+            h1 { font-size: 22px; padding: 16px 0; }
+            .card { padding: 16px 20px; }
+        }
+.footer {
+    position: fixed;
+    bottom: 32px;          
+    left: 0;
+    right: 0;
 
-    .card h2 {
-        font-size: 17px;
-        text-align: center;
-        color: #7db6ff;
-        margin: 0 0 16px;
-        font-weight: 500;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
 
-    .card ul, .card ol {
-        padding-left: 24px;
-        margin: 0;
-        list-style-position: inside;
-        line-height: 1.9;
-    }
+    font-size: 12px;
+    color: rgba(207, 228, 255, 0.65);
 
-    .card li {
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
+    pointer-events: none;
+    user-select: none;
+    z-index: 9999;
+}
 
-    .card li:last-child {
-        margin-bottom: 0;
-    }
+.footer .dim {
+    opacity: 0.7;
+    font-size: 12px;
+    margin: 0;
+    text-align: center;
+}
 
-    .stars { color: #ffd966; }
-    .r { color: #5fa8ff; }
-    .f { color: #ff9f43; }
-    .j { color: #c77dff; }
-
-    .dim {
-        opacity: 0.7;
-        font-size: 12px;
-        text-align: center;
-        margin-top: 16px;
-        display: block;
-    }
-
-    .scrollable {
-        max-height: 68vh;
-        overflow-y: auto;
-        padding-right: 8px;
-    }
-
-    .scrollable::-webkit-scrollbar { width: 6px; }
-    .scrollable::-webkit-scrollbar-thumb { background: rgba(140,160,200,0.55); border-radius: 3px; }
-    .scrollable::-webkit-scrollbar-track { background: transparent; }
-
-    p { font-size: 14px; margin: 6px 0; line-height: 1.6; }
-    strong { color: #a5d8ff; }
-
-    .jurisdiction {
-        position: sticky;
-        top: 12px;
-        float: right;
-        background: rgba(30, 36, 50, 0.55);
-        backdrop-filter: blur(6px);
-        border: 1px solid rgba(255,255,255,0.06);
-        border-radius: 10px;
-        padding: 8px 12px;
-        font-size: 11.5px;
-        line-height: 1.5;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-        opacity: 0.85;
-        z-index: 5;
-    }
-
-    .jurisdiction strong {
-        display: block;
-        text-align: center;
-        font-size: 11px;
-        margin-bottom: 4px;
-        color: #9ecbff;
-        opacity: 0.9;
-    }
-
-    .top-button {
-        position: fixed;     
-        top: 16px;            
-        right: 16px;         
-        z-index: 999;      
-    }
-
-    .top-button a {
-        display: inline-block;
-        padding: 8px 14px;
-        font-size: 12.5px;
-        font-weight: 500;
-        color: #cfe4ff;
-        text-decoration: none;
-        background: rgba(30, 36, 50, 0.7);
-        backdrop-filter: blur(6px);
-        border: 1px solid rgba(255,255,255,0.1);
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.35);
-        transition: all 0.2s ease;
-    }
-
-    .top-button a:hover {
-        background: rgba(50, 70, 110, 0.85);
-        color: #ffffff;
-        transform: translateY(-1px);
-    }
-
-    @media (max-width: 900px) {
-        .grid { gap: 12px; }
-        h1 { font-size: 22px; padding: 16px 0; }
-        .card { padding: 16px 20px; }
-    }
-
-    /* Футер */
-    .footer {
-        position: fixed;
-        bottom: 32px;          
-        left: 0;
-        right: 0;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 4px;
-
-        font-size: 12px;
-        color: rgba(207, 228, 255, 0.65);
-
-        pointer-events: none;
-        user-select: none;
-        z-index: 9999;
-    }
-
-    .footer .dim {
-        opacity: 0.7;
-        font-size: 12px;
-        margin: 0;
-        text-align: center;
-    }
+    </style>
 </style>
 
 </head>
