@@ -147,16 +147,30 @@
         }
 .footer {
     position: fixed;
-    bottom: 32px;
+    bottom: 32px;          
     left: 0;
     right: 0;
-    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
     font-size: 12px;
     color: rgba(207, 228, 255, 0.65);
+
     pointer-events: none;
     user-select: none;
     z-index: 9999;
 }
+
+.footer .dim {
+    opacity: 0.7;
+    font-size: 12px;
+    margin: 0;
+    text-align: center;
+}
+
     </style>
 </head>
 <body>
@@ -403,15 +417,13 @@
                 <li>Гл.4 ст.2 — Если есть судимость у частного адвоката, он не может вести свою деятельность</li>
                 <li>Гл.7 ст.6 — В 5 метрах от совершения преступления - обыск</li>
             </ul>
-            <span class="dim">Памятка by Husher Smith (Discord: metreonik)</span>
-            <span class="dim">Если вышла обнова в законке писать в Discord</span>
         </div>
 
 </div>
 </div>
 <div class="footer">
     <span class="dim">Памятка by Husher Smith (Discord: metreonik)</span>
-    <span class="dim">Если вышла обнова в законке писать в Discor</span>
+    <span class="dim">Если вышла обнова в законке — писать в Discord</span>
 </div>
 </body>
 </html>
