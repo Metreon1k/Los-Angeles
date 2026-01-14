@@ -112,11 +112,10 @@
         }
 
 .top-button {
-    position: fixed;     
-    top: 16px;             
-    right: -100px;        
-    z-index: 999;          
-    transition: right 0.3s ease; 
+    position: fixed;       /* фиксируем на экране */
+    top: 16px;             /* отступ сверху */
+    right: 16px;           /* отступ справа */
+    z-index: 999;          /* поверх всего */
 }
 
 .top-button a {
@@ -134,15 +133,12 @@
     transition: all 0.2s ease;
 }
 
-.top-button:hover {
-    right: 16px; 
-}
-
 .top-button a:hover {
     background: rgba(50, 70, 110, 0.85);
     color: #ffffff;
     transform: translateY(-1px);
 }
+
 
         @media (max-width: 900px) {
             .grid { gap: 12px; }
